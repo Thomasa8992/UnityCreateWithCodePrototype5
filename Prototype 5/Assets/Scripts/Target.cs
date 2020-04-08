@@ -12,7 +12,7 @@ public class Target : MonoBehaviour
 
     private const float minXRange = -4;
     private const float maxXRange = 4;
-    private const float ySpawnPosition = -6;
+    private const float ySpawnPosition = -2;
 
     private Rigidbody targetRigidBody;
     // Start is called before the first frame update
@@ -33,6 +33,14 @@ public class Target : MonoBehaviour
 
     private static Vector3 RandomSpawnPosition() {
         return new Vector3(Random.Range(minXRange, maxXRange), ySpawnPosition);
+    }
+
+    private void OnMouseDown() {
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        Destroy(gameObject);
     }
 
 
