@@ -55,14 +55,4 @@ public class Target : MonoBehaviour
             gameManager.GameOver();
         }
     }
-
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
