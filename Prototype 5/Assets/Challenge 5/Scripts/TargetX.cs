@@ -27,15 +27,13 @@ public class TargetX : MonoBehaviour
     }
 
     // When target is clicked, destroy it, update score, and generate explosion
-    private void OnMouseEnter()
-    {
-        if (gameManagerX.isGameActive)
-        {
+
+    private void OnMouseDown() {
+        if (gameManagerX.isGameActive) {
             Destroy(gameObject);
             gameManagerX.UpdateScore(pointValue);
             Explode();
         }
-               
     }
 
     // Generate a random spawn position based on a random index from 0 to 3
